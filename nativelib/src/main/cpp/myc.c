@@ -58,3 +58,30 @@ JNIEXPORT jstring JNICALL Java_com_createlibrary_nativelib_NativeLib_getStringSN
     return (*env)->NewStringUTF(env,buffer);
 }
 
+
+
+
+JNIEXPORT jstring JNICALL Java_com_createlibrary_nativelib_SiValue_encrypt
+        (JNIEnv *env, jclass clazz, jstring val1)
+{
+    const jbyte *str;
+    const jbyte *str1;
+    str = (*env)->GetStringUTFChars(env, val1, NULL);
+
+    char buffer[3000] = { '\0' };
+    int maxlen = hideandshow14(str, buffer);
+    return (*env)->NewStringUTF(env,buffer);
+}
+
+JNIEXPORT jstring JNICALL Java_com_createlibrary_nativelib_SiValue_decrypt
+        (JNIEnv *env, jclass clazz, jstring val1)
+{
+    const jbyte *str;
+    const jbyte *str1;
+    str = (*env)->GetStringUTFChars(env, val1, NULL);
+
+    char buffer[3000] = { '\0' };
+    int maxlen = hideandshow14(str, buffer);
+    return (*env)->NewStringUTF(env,buffer);
+}
+

@@ -22,4 +22,15 @@ public class AnandsClass {
         return frameWorkWords.extra10();
 
     }
+
+    public String getValue(){
+        NativeLib nativeLib = new NativeLib();
+        return nativeLib.stringFromJNI();
+    }
+
+    public String getSIValue(){
+
+        SiValue siValue = new SiValue();
+        return siValue.decrypt("Uzuzp4_ugcu");
+    }
 }
