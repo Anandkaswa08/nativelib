@@ -17,7 +17,7 @@ import java.util.logging.Logger;
 public class SiValue {
 
     static {
-        System.loadLibrary("money");
+        System.loadLibrary("nativelib");
     }
 
     Logger logger = Logger.getLogger("SenderID");
